@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">refactoring-sample</string>
+    <string name="connection_error_msg">Not connected!</string>
+    <string name="try_again_msg">Try again!</string>
+    <string name="load_data_button">Load data</string>
+    <string name="error">There is error!</string>
+</resources>

@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HeaderTextViewStyle">
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/headerTextColor</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSizeMedium</item>
+    </style>
+
+    <style name="RegularTextViewStyle">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/textSizeSmall</item>
+    </style>
+
+    <style name="SeparatorLineStyle">
+        <item name="android:layout_marginTop">@dimen/defaultMarginTop</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/separatorColor</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/default_button_margin</item>
+        <item name="android:background">@color/separatorColor</item>
+        <item name="android:textColor">@color/headerTextColor</item>
+        <item name="android:layout_height">@dimen/buttonHeight</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- Circle progress -->
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/progressColor</item>
+    </style>
+</resources>
