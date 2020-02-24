@@ -17,10 +17,6 @@ open class BaseViewModel(val context: Context) : ViewModel() {
     val hasError: LiveData<ErrorType>
         get() = _hasError
 
-//    protected var _hasError = MutableLiveData<Boolean>()
-//    val hasError: LiveData<Boolean>
-//        get() = _hasError
-
     protected val coroutineExceptionHandler = CoroutineExceptionHandler { _, throwable ->
         _hasError.value = ErrorType.GENERAL_ERROR
         _hasVisibleProgressLiveData.value = false
@@ -32,10 +28,10 @@ open class BaseViewModel(val context: Context) : ViewModel() {
     }
 
     protected fun checkNetwork() {
-        if (!NetworkUtils.isConnected(context))
-            _hasError.value = ErrorType.NETWORK
-        else {
+        if (NetworkUtils.isConnected(context))
             _hasError.value = ErrorType.NO_ERROR
+        else {
+            _hasError.value = ErrorType.NETWORK
         }
     }
 

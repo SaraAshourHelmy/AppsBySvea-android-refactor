@@ -17,7 +17,7 @@ class ShowPlacesViewModel(context: Context, val placeRepo: PlaceRepository) :
 
     private val job = Job()
     private val coroutineScope = CoroutineScope(
-        job + Dispatchers.Main
+        job + Dispatchers.Main + coroutineExceptionHandler
     )
 
     private var _placesLiveData = MutableLiveData<List<PlaceModel>>()

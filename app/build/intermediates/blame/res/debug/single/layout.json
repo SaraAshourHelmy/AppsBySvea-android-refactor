@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\Sara\\Interviews\\Svea Ekonomi\\Svea\\Task\\AppsBySvea-android-refactoring-sample-sara-ashour-3b08c2732830\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recycler_item.xml",
+        "source": "D:\\Sara\\Interviews\\Svea Ekonomi\\Svea\\Task\\AppsBySvea-android-refactoring-sample-sara-ashour-3b08c2732830\\app\\src\\main\\res\\layout\\recycler_item.xml"
+    },
+    {
         "merged": "D:\\Sara\\Interviews\\Svea Ekonomi\\Svea\\Task\\AppsBySvea-android-refactoring-sample-sara-ashour-3b08c2732830\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\show_places_activity.xml",
         "source": "D:\\Sara\\Interviews\\Svea Ekonomi\\Svea\\Task\\AppsBySvea-android-refactoring-sample-sara-ashour-3b08c2732830\\app\\src\\main\\res\\layout\\show_places_activity.xml"
     }

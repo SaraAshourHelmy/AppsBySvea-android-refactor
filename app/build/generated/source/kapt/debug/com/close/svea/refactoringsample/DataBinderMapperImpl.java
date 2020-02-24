@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.close.svea.refactoringsample.databinding.RecyclerItemBindingImpl;
 import com.close.svea.refactoringsample.databinding.ShowPlacesActivityBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
@@ -18,11 +19,14 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_SHOWPLACESACTIVITY = 1;
+  private static final int LAYOUT_RECYCLERITEM = 1;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(1);
+  private static final int LAYOUT_SHOWPLACESACTIVITY = 2;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.close.svea.refactoringsample.R.layout.recycler_item, LAYOUT_RECYCLERITEM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.close.svea.refactoringsample.R.layout.show_places_activity, LAYOUT_SHOWPLACESACTIVITY);
   }
 
@@ -35,6 +39,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_RECYCLERITEM: {
+          if ("layout/recycler_item_0".equals(tag)) {
+            return new RecyclerItemBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for recycler_item is invalid. Received: " + tag);
+        }
         case  LAYOUT_SHOWPLACESACTIVITY: {
           if ("layout/show_places_activity_0".equals(tag)) {
             return new ShowPlacesActivityBindingImpl(component, view);
@@ -95,9 +105,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(1);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
 
     static {
+      sKeys.put("layout/recycler_item_0", com.close.svea.refactoringsample.R.layout.recycler_item);
       sKeys.put("layout/show_places_activity_0", com.close.svea.refactoringsample.R.layout.show_places_activity);
     }
   }

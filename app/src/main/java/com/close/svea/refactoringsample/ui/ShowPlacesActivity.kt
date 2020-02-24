@@ -55,8 +55,7 @@ class ShowPlacesActivity : BaseActivity(), View.OnClickListener {
         })
 
         viewModel.placesLiveData.observe(this, Observer {
-            binding.placesRecyclerView.adapter =
-                PlacesAdapter(it)
+            binding.placesRecyclerView.adapter = PlacesAdapter(it)
         })
 
     }
