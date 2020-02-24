@@ -24,6 +24,14 @@ class ShowPlacesViewModel(context: Context, val placeRepo: PlaceRepository) :
     val placesLiveData: LiveData<List<PlaceModel>>
         get() = _placesLiveData
 
+    fun checkAndGetPlaces() {
+        checkNetwork()
+        if (_hasError.value == ErrorType.NO_ERROR) {
+            fetchPlaces()
+        }
+
+    }
+
     fun fetchPlaces() {
         _hasVisibleProgressLiveData.value = true
         coroutineScope.launch {
@@ -31,14 +39,6 @@ class ShowPlacesViewModel(context: Context, val placeRepo: PlaceRepository) :
             _hasVisibleProgressLiveData.value = false
             checkEmptyList()
         }
-    }
-
-    fun checkAndGetPlaces() {
-        checkNetwork()
-        if (_hasError.value == ErrorType.NO_ERROR) {
-            fetchPlaces()
-        }
-
     }
 
     private fun checkEmptyList() {
