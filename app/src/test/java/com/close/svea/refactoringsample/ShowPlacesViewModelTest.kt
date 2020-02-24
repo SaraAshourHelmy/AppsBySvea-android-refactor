@@ -12,12 +12,10 @@ import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
 import kotlinx.coroutines.withContext
-import org.junit.Assert
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
+import org.junit.*
 import org.mockito.Mockito
 
 
@@ -122,7 +120,7 @@ class ShowPlacesViewModelTest {
     }
 
     @Test
-    fun `test assert empty places list  `() {
+    fun `test assert empty places list`() {
         runBlocking {
             withContext(Dispatchers.IO) {
                 whenever(placeRepository.getAllPlaces()).thenReturn(placesEmptyModel)
@@ -132,5 +130,11 @@ class ShowPlacesViewModelTest {
                 )
             }
         }
+    }
+
+    @After
+    fun tearDown() {
+        Dispatchers.resetMain()
+        coroutinesTestRule.testDispatcher.cleanupTestCoroutines()
     }
 }

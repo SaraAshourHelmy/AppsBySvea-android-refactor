@@ -15,10 +15,10 @@ public final class ShowPlacesViewModel extends com.ltmtlu.volvocartask.ui.base.B
         return null;
     }
     
-    public final void fetchPlaces() {
+    public final void checkAndGetPlaces() {
     }
     
-    public final void checkAndGetPlaces() {
+    public final void fetchPlaces() {
     }
     
     private final void checkEmptyList() {
