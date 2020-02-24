@@ -1,0 +1,4 @@
+#Sun Feb 23 14:03:14 EET 2020
+base.0=D\:\\Sara\\Interviews\\Svea Ekonomi\\Svea\\Task\\AppsBySvea-android-refactoring-sample-sara-ashour-3b08c2732830\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
